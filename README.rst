@@ -4,6 +4,7 @@ Sea Cucumber 1.5.1
 :Info: A Django email backend for Amazon Simple Email Service, backed by django-celery_
 :Author: DUO Interactive, LLC
 :Inspired by: Harry Marr's django-ses_.
+:Status: **Unmaintained**. Let us know if you'd like to step in!
 
 A bird's eye view
 =================
@@ -178,11 +179,7 @@ Getting Help
 ============
 
 If you have any questions, feel free to either post them to our
-`issue tracker`_, or visit us on IRC at:
-
-:Host: irc.freenode.net
-:Port: 6667
-:Room: #duo
+`issue tracker`_.
 
 .. _django-ses: https://github.com/hmarr/django-ses
 .. _django-celery: http://ask.github.com/django-celery/
