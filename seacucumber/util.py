@@ -40,6 +40,21 @@ def get_boto_ses_connection():
         aws_secret_access_key=access_key,
         region=get_ses_region()
     )
+    region_name = getattr(
+        settings, 'CUCUMBER_SES_REGION_NAME',
+        getattr(settings, 'AWS_SES_REGION_NAME', None))
+
+    if region_name != None:
+        return boto.ses.connect_to_region(
+            region_name,
+            aws_access_key_id=access_key_id,
+            aws_secret_access_key=access_key,
+        )
+    else:
+        return boto.connect_ses(
+            aws_access_key_id=access_key_id,
+            aws_secret_access_key=access_key,
+        )
 
 
 def dkim_sign(message):
